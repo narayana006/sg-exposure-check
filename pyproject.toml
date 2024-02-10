@@ -1,0 +1,33 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "sg-exposure-check"
+version = "0.1.0"
+description = "Find AWS security groups that expose sensitive ports to the internet, and show which instances, load balancers and databases they actually reach."
+readme = "README.md"
+license = { text = "MIT" }
+authors = [{ name = "Narayana Vemburaj" }]
+requires-python = ">=3.10"
+dependencies = ["boto3>=1.26", "PyYAML>=6.0"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Topic :: Security",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=7", "moto[ec2]>=5.0"]
+
+[project.scripts]
+sg-exposure-check = "sg_exposure_check.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/narayana006/sg-exposure-check"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
