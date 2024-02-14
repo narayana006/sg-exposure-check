@@ -1,0 +1,5 @@
+# Illustrative sensitive-port list (replaces the built-in defaults when passed with --ports-file).
+22: SSH
+3389: RDP
+5432: PostgreSQL
+8080: Jenkins

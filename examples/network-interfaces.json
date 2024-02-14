@@ -1,0 +1,267 @@
+{
+  "NetworkInterfaces": [
+    {
+      "AvailabilityZone": "us-east-1a",
+      "Description": "",
+      "Groups": [
+        {
+          "GroupId": "sg-0a1b2c3d4e5f00001",
+          "GroupName": "bastion-ssh"
+        }
+      ],
+      "InterfaceType": "interface",
+      "Ipv6Addresses": [],
+      "MacAddress": "0e:00:00:00:00:01",
+      "NetworkInterfaceId": "eni-0f0e0d0c0b0a00001",
+      "OwnerId": "123456789012",
+      "PrivateIpAddress": "10.20.1.1",
+      "RequesterManaged": false,
+      "SourceDestCheck": true,
+      "Status": "in-use",
+      "SubnetId": "subnet-0123456789abcdef1",
+      "TagSet": [],
+      "VpcId": "vpc-0123456789abcdef0",
+      "Attachment": {
+        "AttachmentId": "eni-attach-00000000000000001",
+        "DeleteOnTermination": true,
+        "DeviceIndex": 0,
+        "InstanceId": "i-0a1b2c3d4e5f00001",
+        "InstanceOwnerId": "123456789012",
+        "Status": "attached"
+      },
+      "Association": {
+        "IpOwnerId": "amazon",
+        "PublicDnsName": "",
+        "PublicIp": "203.0.113.10"
+      }
+    },
+    {
+      "AvailabilityZone": "us-east-1a",
+      "Description": "ELB app/web-alb/50dc6c495c0c9188",
+      "Groups": [
+        {
+          "GroupId": "sg-0a1b2c3d4e5f00002",
+          "GroupName": "web-alb"
+        }
+      ],
+      "InterfaceType": "interface",
+      "Ipv6Addresses": [],
+      "MacAddress": "0e:00:00:00:00:02",
+      "NetworkInterfaceId": "eni-0f0e0d0c0b0a00002",
+      "OwnerId": "123456789012",
+      "PrivateIpAddress": "10.20.1.2",
+      "RequesterManaged": true,
+      "SourceDestCheck": true,
+      "Status": "in-use",
+      "SubnetId": "subnet-0123456789abcdef0",
+      "TagSet": [],
+      "VpcId": "vpc-0123456789abcdef0",
+      "RequesterId": "amazon-elb",
+      "Attachment": {
+        "AttachmentId": "ela-attach-0abc",
+        "DeleteOnTermination": false,
+        "DeviceIndex": 1,
+        "InstanceOwnerId": "amazon-elb",
+        "Status": "attached"
+      },
+      "Association": {
+        "IpOwnerId": "amazon",
+        "PublicDnsName": "",
+        "PublicIp": "203.0.113.21"
+      }
+    },
+    {
+      "AvailabilityZone": "us-east-1a",
+      "Description": "ELB app/web-alb/50dc6c495c0c9188",
+      "Groups": [
+        {
+          "GroupId": "sg-0a1b2c3d4e5f00002",
+          "GroupName": "web-alb"
+        }
+      ],
+      "InterfaceType": "interface",
+      "Ipv6Addresses": [],
+      "MacAddress": "0e:00:00:00:00:03",
+      "NetworkInterfaceId": "eni-0f0e0d0c0b0a00003",
+      "OwnerId": "123456789012",
+      "PrivateIpAddress": "10.20.1.3",
+      "RequesterManaged": true,
+      "SourceDestCheck": true,
+      "Status": "in-use",
+      "SubnetId": "subnet-0123456789abcdef1",
+      "TagSet": [],
+      "VpcId": "vpc-0123456789abcdef0",
+      "RequesterId": "amazon-elb",
+      "Attachment": {
+        "AttachmentId": "ela-attach-0abc",
+        "DeleteOnTermination": false,
+        "DeviceIndex": 1,
+        "InstanceOwnerId": "amazon-elb",
+        "Status": "attached"
+      },
+      "Association": {
+        "IpOwnerId": "amazon",
+        "PublicDnsName": "",
+        "PublicIp": "203.0.113.22"
+      }
+    },
+    {
+      "AvailabilityZone": "us-east-1a",
+      "Description": "RDSNetworkInterface",
+      "Groups": [
+        {
+          "GroupId": "sg-0a1b2c3d4e5f00003",
+          "GroupName": "orders-db"
+        }
+      ],
+      "InterfaceType": "interface",
+      "Ipv6Addresses": [],
+      "MacAddress": "0e:00:00:00:00:04",
+      "NetworkInterfaceId": "eni-0f0e0d0c0b0a00004",
+      "OwnerId": "123456789012",
+      "PrivateIpAddress": "10.20.1.4",
+      "RequesterManaged": true,
+      "SourceDestCheck": true,
+      "Status": "in-use",
+      "SubnetId": "subnet-0123456789abcdef0",
+      "TagSet": [],
+      "VpcId": "vpc-0123456789abcdef0",
+      "RequesterId": "amazon-rds",
+      "Attachment": {
+        "AttachmentId": "ela-attach-0abc",
+        "DeleteOnTermination": false,
+        "DeviceIndex": 1,
+        "InstanceOwnerId": "amazon-rds",
+        "Status": "attached"
+      }
+    },
+    {
+      "AvailabilityZone": "us-east-1a",
+      "Description": "",
+      "Groups": [
+        {
+          "GroupId": "sg-0a1b2c3d4e5f00005",
+          "GroupName": "batch-workers"
+        }
+      ],
+      "InterfaceType": "interface",
+      "Ipv6Addresses": [
+        {
+          "Ipv6Address": "2001:db8:1234::5"
+        }
+      ],
+      "MacAddress": "0e:00:00:00:00:05",
+      "NetworkInterfaceId": "eni-0f0e0d0c0b0a00005",
+      "OwnerId": "123456789012",
+      "PrivateIpAddress": "10.20.1.5",
+      "RequesterManaged": false,
+      "SourceDestCheck": true,
+      "Status": "in-use",
+      "SubnetId": "subnet-0123456789abcdef1",
+      "TagSet": [],
+      "VpcId": "vpc-0123456789abcdef0",
+      "Attachment": {
+        "AttachmentId": "eni-attach-00000000000000005",
+        "DeleteOnTermination": true,
+        "DeviceIndex": 0,
+        "InstanceId": "i-0a1b2c3d4e5f00005",
+        "InstanceOwnerId": "123456789012",
+        "Status": "attached"
+      }
+    },
+    {
+      "AvailabilityZone": "us-east-1a",
+      "Description": "",
+      "Groups": [
+        {
+          "GroupId": "sg-0a1b2c3d4e5f00005",
+          "GroupName": "batch-workers"
+        }
+      ],
+      "InterfaceType": "interface",
+      "Ipv6Addresses": [
+        {
+          "Ipv6Address": "2001:db8:1234::6"
+        }
+      ],
+      "MacAddress": "0e:00:00:00:00:06",
+      "NetworkInterfaceId": "eni-0f0e0d0c0b0a00006",
+      "OwnerId": "123456789012",
+      "PrivateIpAddress": "10.20.1.6",
+      "RequesterManaged": false,
+      "SourceDestCheck": true,
+      "Status": "in-use",
+      "SubnetId": "subnet-0123456789abcdef0",
+      "TagSet": [],
+      "VpcId": "vpc-0123456789abcdef0",
+      "Attachment": {
+        "AttachmentId": "eni-attach-00000000000000006",
+        "DeleteOnTermination": true,
+        "DeviceIndex": 0,
+        "InstanceId": "i-0a1b2c3d4e5f00006",
+        "InstanceOwnerId": "123456789012",
+        "Status": "attached"
+      }
+    },
+    {
+      "AvailabilityZone": "us-east-1a",
+      "Description": "AWS Lambda VPC ENI-orders-worker-3f2b8c1e-7d4a-4f5e-9b6c-0a1b2c3d4e5f",
+      "Groups": [
+        {
+          "GroupId": "sg-0a1b2c3d4e5f00006",
+          "GroupName": "orders-lambda"
+        }
+      ],
+      "InterfaceType": "lambda",
+      "Ipv6Addresses": [],
+      "MacAddress": "0e:00:00:00:00:07",
+      "NetworkInterfaceId": "eni-0f0e0d0c0b0a00007",
+      "OwnerId": "123456789012",
+      "PrivateIpAddress": "10.20.1.7",
+      "RequesterManaged": true,
+      "SourceDestCheck": true,
+      "Status": "in-use",
+      "SubnetId": "subnet-0123456789abcdef1",
+      "TagSet": [],
+      "VpcId": "vpc-0123456789abcdef0",
+      "RequesterId": "123456789012",
+      "Attachment": {
+        "AttachmentId": "ela-attach-0abc",
+        "DeleteOnTermination": false,
+        "DeviceIndex": 1,
+        "InstanceOwnerId": "amazon-aws",
+        "Status": "attached"
+      }
+    },
+    {
+      "AvailabilityZone": "us-east-1a",
+      "Description": "",
+      "Groups": [
+        {
+          "GroupId": "sg-0a1b2c3d4e5f00007",
+          "GroupName": "internal-api"
+        }
+      ],
+      "InterfaceType": "interface",
+      "Ipv6Addresses": [],
+      "MacAddress": "0e:00:00:00:00:08",
+      "NetworkInterfaceId": "eni-0f0e0d0c0b0a00008",
+      "OwnerId": "123456789012",
+      "PrivateIpAddress": "10.20.1.8",
+      "RequesterManaged": false,
+      "SourceDestCheck": true,
+      "Status": "in-use",
+      "SubnetId": "subnet-0123456789abcdef0",
+      "TagSet": [],
+      "VpcId": "vpc-0123456789abcdef0",
+      "Attachment": {
+        "AttachmentId": "eni-attach-00000000000000008",
+        "DeleteOnTermination": true,
+        "DeviceIndex": 0,
+        "InstanceId": "i-0a1b2c3d4e5f00008",
+        "InstanceOwnerId": "123456789012",
+        "Status": "attached"
+      }
+    }
+  ]
+}
