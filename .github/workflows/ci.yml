@@ -1,0 +1,33 @@
+name: CI
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: ["3.10", "3.12"]
+    env:
+      # Tests use moto; make sure nothing can reach real AWS.
+      AWS_ACCESS_KEY_ID: testing
+      AWS_SECRET_ACCESS_KEY: testing
+      AWS_DEFAULT_REGION: us-east-1
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+      - run: pip install -e ".[dev]"
+      - run: pytest -q
+      - name: Run the CLI on the examples
+        run: |
+          set +e
+          sg-exposure-check -i examples/security-groups.json -i examples/network-interfaces.json
+          code=$?
+          set -e
+          # The example data contains exposed groups on purpose: expect exit code 1.
+          test "$code" -eq 1
+          sg-exposure-check -i examples/security-groups.json -i examples/network-interfaces.json -f json --fail-on never > /dev/null
