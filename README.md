@@ -7,7 +7,7 @@ Find AWS security groups that expose sensitive ports to the internet, and show w
 ## Install
 
 ```bash
-pip install git+https://github.com/narayana006/sg-exposure-check
+pip install sg-exposure-check
 ```
 
 Python 3.10 or newer. Dependencies: `boto3`, `PyYAML`.
@@ -128,16 +128,21 @@ Offline mode needs no AWS access.
 
 ## Features
 
-- [x] Offline input from AWS CLI exports (separate or combined files, stdin)
-- [x] Live read-only collection with pagination, VPC filter and `--save` snapshots
-- [x] Flags `0.0.0.0/0` and `::/0` ingress, all-traffic and all-ports rules
-- [x] Configurable sensitive ports (`--ports-file`, `--port`)
-- [x] Resolves which instances, load balancers, RDS, Lambda and other interfaces use each group
-- [x] Lower severity for unattached groups and groups with no public address behind them
-- [x] Text and JSON output, `--min-severity`, `--fail-on` exit codes
-- [ ] Network ACL and route table checks (is the subnet actually internet-routable?)
-- [ ] Multi-region scan in one run
-- [ ] Flag broad but non-zero CIDRs (e.g. `/8` from outside your network)
+- Offline input from AWS CLI exports (separate or combined files, stdin)
+- Live read-only collection with pagination, VPC filter and `--save` snapshots
+- Flags `0.0.0.0/0` and `::/0` ingress, all-traffic and all-ports rules
+- Configurable sensitive ports (`--ports-file`, `--port`)
+- Resolves which instances, load balancers, RDS, Lambda and other interfaces use each group
+- Lower severity for unattached groups and groups with no public address behind them
+- Text and JSON output, `--min-severity`, `--fail-on` exit codes
+
+## Roadmap
+
+Not built yet:
+
+- Network ACL and route table checks (is the subnet actually internet-routable?)
+- Multi-region scan in one run
+- Flag broad but non-zero CIDRs (e.g. `/8` from outside your network)
 
 ## Limitations
 
